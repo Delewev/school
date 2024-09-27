@@ -1,11 +1,11 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $firstName = htmlspecialchars(trim($_POST['first_name']));
-    $lastName = htmlspecialchars(trim($_POST['last_name']));
-    $email = htmlspecialchars(trim($_POST['email']));
-    $password = htmlspecialchars(trim($_POST['password']));
-    $confirmPassword = htmlspecialchars(trim($_POST['confirm_password']));
+    $firstName = trim(isset($_POST['first_name']));
+    $lastName = trim(isset($_POST['last_name']));
+    $email = (isset($_POST['email']));
+    $password = (isset($_POST['password']));
+    $confirmPassword = (isset($_POST['confirm_password']));
 
     // Проверка на совпадение паролей
     if ($password !== $confirmPassword) {
