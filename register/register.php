@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     }
 
-    echo "Регистрация прошла успешно. Добро пожаловать, $firstName, $hashedPassword!";
+    echo "Регистрация прошла успешно. Добро пожаловать, $firstName!";
 } else {
     echo "Некорректный запрос.";
 }
