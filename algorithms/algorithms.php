@@ -1,6 +1,6 @@
 <?php
 
-$tasks = [
+$arr = [
     ['id' => 1,  'name' => 'Задача 1', 'parent_id' => null],
     ['id' => 2,  'name' => 'Задача 2', 'parent_id' => null],
     ['id' => 3,  'name' => 'Задача 3', 'parent_id' => null],
@@ -38,5 +38,5 @@ function displayTree(array $tree) {
     }
 }
 
-$tree = buildTree($tasks);
+$tree = buildTree($arr);
 displayTree($tree);
